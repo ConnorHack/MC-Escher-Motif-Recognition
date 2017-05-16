@@ -1,3 +1,6 @@
+%
+%
+%
 function C = joinCellArray(A,B)
 
   C = A;
