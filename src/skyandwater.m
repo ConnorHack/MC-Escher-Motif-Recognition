@@ -1,11 +1,11 @@
 function skyandwater
     %read in file
-    I = imread( 'SkyAndWater.jpg' );
+    I = imread( '../imgs/SkyAndWater.jpg' );
     % clear figure
     clf
     %show original image
     imagesc( I );
-    fprintf("Press any key to continue")
+    fprintf('Press any key to continue\n')
     pause;
     % convert to bw
     I = im2bw( I );
@@ -15,7 +15,7 @@ function skyandwater
     % pass to 
     I = morphCycle( I , {open close} , {'Disc','Vline','Hline'} , 15 );
     imagesc(I);
-    fprintf("Press any key to continue");
+    fprintf('Press any key to continue\n');
     pause;
     % connected components
     cc = bwconncomp( I );
